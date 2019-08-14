@@ -1,1 +1,1 @@
-# Edge-detection---Canny-detector
+# Edge detection: Canny-detector
