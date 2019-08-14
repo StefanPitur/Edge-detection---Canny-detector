@@ -2,8 +2,8 @@ import cv2
 import os
 import numpy as np
 
-input_path = (r'C:/Users/Stefan Pitur/Desktop/python inceputuri/edge detection/input_data/')
-output_path = (r'C:/Users/Stefan Pitur/Desktop/python inceputuri/edge detection/output_data/')
+input_path = (r'__your_input_path')
+output_path = (r'__your_output_path')
 
 def Grayscale(image):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
