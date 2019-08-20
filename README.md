@@ -7,7 +7,7 @@ Developed by John F. Canny in 1986, the Canny edge detection is a multi-stage al
 
 1)    Apply Gaussian Filter to the image.
 2)    Determine the gradient matrix.
-3)    Apply NMS ( Non - Maximum Surpression ) 
+3)    Apply NMS ( Non - Maximum Suppression ) 
 4)    Apply Double Threshold to detect potential edges
 5)    Hysteresis. Connect the weak edges to their strong neighbour.
 
@@ -34,6 +34,6 @@ At each point, the resulting gradient and angle are calculated using these formu
 
 ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/23ae6772c5f58751fc6014b71d6adafb30a31c79) , ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/b3e4efe0d943867ba795d1a960f36d71c1812880)
 
-# 3) Non Maximum - Surpression (NMS)
+# 3) Non Maximum - Suppression (NMS)
 
 Non Maximum - Surpression is an edge-thinning technique. The algorithm goes thru the gradient matrix and finds the pixels with the highest intensity on the direction of the edge. The direction is take from the angle matrix we have determined before.
