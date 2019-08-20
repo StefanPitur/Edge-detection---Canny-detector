@@ -25,4 +25,15 @@ The first parameter is the image that we want to apply blur on. The second param
 
 # 2) Calculating the intensity gradient of the image
 
+The gradient detects the direction and the intensity of the edge by using edge-detection operators. I used the Sobel operator because it is very easy to code and to understand. To detect the change of pixels' intensity we simply apply Sobel filters on both X-axis and Y-axis.  Where is how you calculate the gradients:
 
+
+![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/d2d3c95c9afd9aca9343a0bef60123ff94263f5f)
+
+At each point, the resulting gradient and angle are calculated using these formulas:
+
+![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/23ae6772c5f58751fc6014b71d6adafb30a31c79) , ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/b3e4efe0d943867ba795d1a960f36d71c1812880)
+
+# 3) Non Maximum - Surpression (NMS)
+
+Non Maximum - Surpression is an edge-thinning technique. The algorithm goes thru the gradient matrix and finds the pixels with the highest intensity on the direction of the edge. The direction is take from the angle matrix we have determined before.
