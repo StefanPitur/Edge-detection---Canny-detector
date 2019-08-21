@@ -14,11 +14,7 @@ def GaussianBlur(image):
     return image
 
 def SobelFilter(image):
-    '''
-    apply sobel operator
-    calculate gradient magnitude and gradient directions in degrees
-    '''
-    image = GaussianBlur(Grayscale(image))
+    image = Grayscale(GaussianBlur(image))
     convolved = np.zeros(image.shape)
     G_x = np.zeros(image.shape)
     G_y = np.zeros(image.shape)
@@ -84,11 +80,7 @@ def double_threshold_hysteresis(image, low, high):
                 result[new_x, new_y] = strong
                 np.append(strong_x, new_x)
                 np.append(strong_y, new_y)
-
-    for i in range(size[0]):
-        for j in range(size[1]):
-            if result[i, j] != strong:
-                result[i, j] = 0
+    result[result != strong] = 0
     return result
 
 
