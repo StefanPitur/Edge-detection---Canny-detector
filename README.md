@@ -67,3 +67,7 @@ Now our image consists of weak pixels and strong pixels. We have to make all tru
 I hope this article clarifies every step of the algorithm. If you have any questions or improvements that can be made to my code (because it is not perfect) don't hestinate to contact me :) !
 
 Resourses:
+
+https://en.wikipedia.org/wiki/Canny_edge_detector
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html
+https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm
